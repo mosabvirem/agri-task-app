@@ -24,8 +24,10 @@ jobs:
         with:
           channel: 'stable'
 
-      - name: Fetch Dependencies
-        run: flutter pub get
+      - name: Generate Android Native Files & Fetch Dependencies
+        run: |
+          flutter create . --platforms=android
+          flutter pub get
 
       - name: Build Debug APK
         run: flutter build apk --debug
