@@ -30,8 +30,8 @@ jobs:
       - name: Build Debug APK
         run: flutter build apk --debug
 
-      - name: Upload APK Artifact
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: AgriTask-App-Debug
+          name: app-debug
           path: build/app/outputs/flutter-apk/app-debug.apk
