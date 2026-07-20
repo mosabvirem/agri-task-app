@@ -24,14 +24,14 @@ jobs:
         with:
           channel: 'stable'
 
-      - name: Install Dependencies
+      - name: Fetch Dependencies
         run: flutter pub get
 
       - name: Build Debug APK
         run: flutter build apk --debug
 
-      - name: Upload APK
+      - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: app-debug
+          name: AgriTask-App-Debug
           path: build/app/outputs/flutter-apk/app-debug.apk
